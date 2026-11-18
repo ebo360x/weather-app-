@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <form class="search" id="searchForm">
+      <input type="text" id="cityInput" placeholder="Search city..." autocomplete="off" />
+      <button type="submit" id="searchBtn">Search</button>
+    </form>
+
+    <p class="message" id="message"></p>
+
+    <section class="top">
+      <div class="card current">
+        <h2 id="cityName">City</h2>
+        <p class="country" id="country"></p>
+        <div class="temp-row">
+          <img id="icon" class="icon-img" alt="" hidden />
+          <span id="temp">--°</span>
+        </div>
+        <p id="desc">---</p>
+        <div class="details">
+          <span>💧 <b id="humidity">--</b>%</span>
+          <span>💨 <b id="wind">--</b> km/h</span>
+          <span>🌡️ Feels <b id="feels">--</b>°</span>
+        </div>
+      </div>
+
+      <div class="card map">
+        <iframe id="mapFrame" title="City map" loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Daily Forecast</h3>
+      <div class="strip" id="forecastStrip"></div>
+    </section>
+
+    <section class="card">
+      <h3>Hourly Forecast</h3>
+      <div class="strip" id="hourlyStrip"></div>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
